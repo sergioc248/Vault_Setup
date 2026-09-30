@@ -1,0 +1,4 @@
+SECURITY NOTICE
+
+Repeated failed remote authentication attempts will be written to the system journal.
+Automatic lockout was not enabled before the communications failure.

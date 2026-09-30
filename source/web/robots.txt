@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /archive/
+Disallow: /old/
+Disallow: /internal/

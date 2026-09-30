@@ -1,0 +1,5 @@
+VAULT-TEC WORK ORDER
+WO-217-185
+
+Life-support telemetry from Sector C is intermittent.
+Replacement sensor request denied by JANUS inventory control.

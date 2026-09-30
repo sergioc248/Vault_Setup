@@ -1,0 +1,53 @@
+# Checklist de validación
+
+- [ ] Snapshot limpio creado antes de una sesión.
+- [ ] Kali y Vault 217 comparten únicamente la red de laboratorio prevista.
+- [x] La víctima responde en `192.168.56.102` dentro de `192.168.56.0/24`.
+- [x] El firewall expone únicamente HTTP y SSH como servicios del reto.
+- [x] `httpd` y `sshd` están activos y habilitados automáticamente.
+- [x] `robots.txt` y `/archive/` son accesibles.
+- [x] `/internal/` devuelve 403.
+- [x] Las credenciales de `maint217` permiten SSH.
+- [x] `maint217` no tiene acceso al home de `ncole`.
+- [x] El perfil contiene `SunsetSarsaparilla` exactamente para CeWL.
+- [ ] Hydra encuentra `ncole:SunsetSarsaparilla` en tiempo razonable.
+- [x] `ncole` no puede leer el informe plano protegido de `/vault217/aurora`.
+- [x] Las cinco flags tienen los valores documentados.
+- [x] `verify-vault217.sh` termina sin errores.
+- [x] Python 3, Scapy, PHP y PHP-FPM están instalados.
+- [x] El PCAP contiene 54 paquetes con ARP, DNS, TCP y HTTP.
+- [x] `ncole` puede leer la captura y `maint217` no puede hacerlo.
+- [x] SCP como `ncole` permite copiar los fragmentos y `lockdown-184.pcap`.
+- [x] Base64 reconstruye `transmission.txt` y su SHA-256 es válido.
+- [x] El formulario no revela Flag 3 sin el token correcto.
+- [x] Un token incorrecto produce HTTP 403.
+- [x] Camera 04 y el token válido muestran Flag 3.
+- [x] La descarga sin token produce HTTP 403.
+- [x] La descarga válida coincide con la imagen maestra por SHA-256.
+- [x] Los usuarios del reto no pueden leer directamente PHP ni `cam04.jpg`.
+- [x] Steghide y ExifTool están instalados.
+- [x] La imagen final no contiene el manifiesto C2PA original.
+- [x] La metadata contiene las cuatro pistas narrativas esperadas.
+- [x] Public Records enlaza al índice de políticas.
+- [x] La Política 7-B contiene `PROJECT-ROOM-YEAR`.
+- [x] El perfil de Eleanor Shaw contiene `SCI-076`.
+- [x] `AURORA-B04-2077` extrae `shaw_package.tar`.
+- [x] `SCI-076-C23` descifra correctamente el archivo AES.
+- [x] `aurora_emergency.tar` pasa su verificación SHA-256.
+- [x] Flag 4 y los siete archivos AURORA están presentes.
+- [x] `janus_public.asc` contiene una identidad OpenPGP RSA-3072 con subclave de cifrado.
+- [x] El log JANUS contiene `0x7F` y solo es legible por `ncole`.
+- [x] Los parámetros DH producen `A = 132` y `S = 175`.
+- [x] La recovery key SHA-256 coincide con el protocolo.
+- [x] `ncole` puede copiar ambos archivos finales y `maint217` no.
+- [x] La clave privada AES se recupera y corresponde a la pública.
+- [x] GPG descifra el informe y revela `OMEGA-217-AURORA`.
+- [x] Un código incorrecto devuelve HTTP 403 sin cambiar el estado.
+- [x] El override correcto entrega Flag 5 y persiste `TERMINATED`.
+- [x] La verificación devuelve JANUS a `ACTIVE` al terminar.
+- [ ] Steghide, ExifTool y OpenSSL se probaron manualmente desde Kali.
+- [x] La cadena completa se probó localmente usando únicamente la imagen descargada por HTTP.
+- [x] La Misión 5 se probó mediante SCP, script propio, OpenSSL, GPG y override persistente.
+- [ ] El flujo completo del PCAP se revisó manualmente en Wireshark desde Kali.
+- [ ] Tras reiniciar, HTTP y SSH vuelven a estar activos.
+- [ ] Al finalizar un grupo se ejecuta `reset-vault217.sh` o se restaura el snapshot.

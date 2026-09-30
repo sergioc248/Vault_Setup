@@ -1,0 +1,5 @@
+VAULT 217 NETWORK MAP — OBSOLETE
+
+EXTERNAL TERMINAL -> MAINTENANCE RELAY -> JANUS CORE
+
+NOTICE: Internal addressing removed from this public revision.

@@ -1,0 +1,12 @@
+# Vault-Tec Remote Maintenance Configuration
+# Vault 217
+
+REMOTE_ACCESS=true
+PROTOCOL=SSH
+REMOTE_USER=maint217
+
+# Temporary credential issued during terminal migration.
+TEMP_ACCESS_CODE=VaultTec-MNT-217
+
+# TODO:
+# Remove temporary account after migration.

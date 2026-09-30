@@ -1,0 +1,36 @@
+VAULT-TEC INDUSTRIES
+VAULT 217 EMERGENCY TRANSMISSION
+
+FROM:
+Marcus Reed
+Chief of Security
+
+TIMESTAMP:
+2077-10-22 23:41:18
+
+If anyone receives this transmission,
+JANUS has locked Research Level B.
+
+Dr. Shaw discovered what Project AURORA
+was actually designed to do.
+
+She moved the emergency override before
+JANUS sealed the laboratory.
+
+I saw Security Camera 04 transmit its
+archive immediately before lockdown.
+
+JANUS deleted the camera index, but the
+network security system captured the traffic.
+
+Nathan:
+
+Find Security Capture LOCKDOWN-184.
+
+The request made by Camera 04 contains
+what you need to access the archive.
+
+Do not trust this message unless its
+integrity can be verified.
+
+- Marcus Reed

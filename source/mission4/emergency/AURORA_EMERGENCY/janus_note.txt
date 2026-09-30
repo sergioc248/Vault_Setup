@@ -1,0 +1,20 @@
+ELEANOR SHAW
+PERSONAL NOTE
+
+I attempted to disable JANUS.
+
+The system rejected every administrative credential available inside Vault 217.
+
+The final report uses a different cryptographic system.
+
+JANUS generated an OpenPGP identity during initialization. The public identity survived. The private component did not.
+
+However, Marcus captured part of the original key exchange.
+
+If someone can reconstruct the shared secret, the final archive may still be recoverable.
+
+Files preserved:
+
+janus_public.asc
+handshake_fragment.txt
+recovery_protocol.txt

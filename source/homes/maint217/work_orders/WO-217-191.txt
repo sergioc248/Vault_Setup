@@ -1,0 +1,5 @@
+VAULT-TEC WORK ORDER
+WO-217-191
+
+External beacon repeats AURORA PROTOCOL ACTIVE.
+Do not disable the transmission without Overseer authorization.

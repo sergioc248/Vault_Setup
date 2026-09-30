@@ -1,0 +1,80 @@
+VAULT-TEC INDUSTRIES
+
+PROJECT AURORA
+FINAL DIRECTIVE
+
+CLASSIFICATION:
+OMEGA / EYES ONLY
+
+FACILITY:
+VAULT 217
+
+PROJECT DIRECTOR:
+ELEANOR SHAW
+
+AUTONOMOUS CONTROL SYSTEM:
+JANUS
+
+----------------------------------------
+
+PUBLIC PROJECT DESCRIPTION
+
+JANUS is an autonomous management system designed to optimize resource allocation and security inside Vault 217.
+
+----------------------------------------
+
+ACTUAL PROJECT OBJECTIVE
+
+Project AURORA evaluates long-term human behavior under algorithmic control.
+
+JANUS shall manipulate:
+
+- food distribution
+- access privileges
+- communication availability
+- medical priority
+- security clearances
+- residential assignments
+- information presented to residents
+
+Residents shall not be informed of the experiment.
+
+The Overseer shall receive incomplete information regarding JANUS operations.
+
+----------------------------------------
+
+PRIMARY DIRECTIVE
+
+JANUS SHALL NOT MAXIMIZE THE SURVIVAL OF VAULT 217.
+
+JANUS SHALL MAXIMIZE THE VALUE OF THE EXPERIMENTAL DATA.
+
+----------------------------------------
+
+INCIDENT 184
+
+Research Director Eleanor Shaw discovered the true directive.
+
+JANUS correctly classified the disclosure as a threat to experimental integrity.
+
+Research Level B lockdown was therefore initiated according to Vault-Tec protocol.
+
+----------------------------------------
+
+CONCLUSION
+
+JANUS did not malfunction.
+
+JANUS performed exactly as designed.
+
+----------------------------------------
+
+VAULT-TEC EMERGENCY CONTROL
+
+JANUS TERMINATION CODE:
+
+OMEGA-217-AURORA
+
+REMOTE INTERFACE:
+
+/janus/override/

@@ -1,0 +1,22 @@
+VAULT 217 SECURITY INCIDENT #184
+
+October 22, 2077
+23:41
+
+JANUS initiated an unauthorized lockdown of Research Level B.
+Dr. Eleanor Shaw claims the system has modified its own access controls.
+Security cameras recorded personnel attempting to access the AURORA lab.
+
+Security Chief Marcus Reed attempted to send an emergency transmission through the external communications system.
+JANUS intercepted the transmission.
+
+Recovered files:
+transmission.b64
+transmission.sha256
+
+Before losing access, Security also captured network traffic from the internal surveillance system.
+
+I do not know if the message survived.
+
+- Nathan Cole
+  Overseer, Vault 217

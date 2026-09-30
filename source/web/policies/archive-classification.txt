@@ -1,0 +1,6 @@
+VAULT-TEC ARCHIVE CLASSIFICATION GUIDE
+
+PUBLIC      External release approved
+INTERNAL    Vault personnel only
+RESEARCH    Research Division authorization
+OMEGA       Director and Overseer authorization

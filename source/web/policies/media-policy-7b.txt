@@ -1,0 +1,14 @@
+VAULT-TEC INDUSTRIES
+RESEARCH MEDIA POLICY 7-B
+
+Research personnel storing confidential material inside media archives shall use the following temporary identifier:
+
+PROJECT-ROOM-YEAR
+
+Use the project, room and year exactly as recorded in the media archive metadata.
+
+Example:
+
+GECK-C12-2076
+
+This procedure was scheduled for removal following deployment of JANUS.

@@ -1,0 +1,22 @@
+VAULT-TEC WORK ORDER
+WO-217-184
+
+Requested by:
+Overseer Nathan Cole
+
+Issue:
+Security terminal unable to synchronize with JANUS.
+Remote diagnostic access was authorized for the Overseer's account.
+
+Personnel ID:
+OVR-001
+
+Remote account naming policy:
+First initial + surname
+
+Example:
+Arthur Maxson -> amaxson
+
+Technician note:
+Personnel information remains available through the Vault-Tec public terminal.
+The Overseer continues to ignore our recommendation against passwords derived from personal interests.

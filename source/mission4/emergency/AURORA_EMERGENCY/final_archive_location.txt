@@ -1,0 +1,12 @@
+FINAL PROJECT ARCHIVE
+
+Reserved location:
+
+/vault217/aurora/final/
+
+Authorized files:
+
+AURORA_FINAL_REPORT.gpg
+janus_private.asc.enc
+
+JANUS private recovery material is protected according to Emergency Key Recovery Standard 217-A.

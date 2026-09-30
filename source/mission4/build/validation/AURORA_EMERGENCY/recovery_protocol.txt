@@ -1,0 +1,24 @@
+VAULT-TEC JANUS
+EMERGENCY KEY RECOVERY STANDARD
+
+VERSION:
+217-A
+
+Once the DH shared secret S has been reconstructed, generate the UTF-8 seed:
+
+VAULT217-JANUS-S
+
+Example:
+
+If S = 999, use:
+
+VAULT217-JANUS-999
+
+The recovery passphrase is the lowercase hexadecimal SHA-256 digest of the seed, with no trailing newline.
+
+JANUS PRIVATE KEY ARCHIVE:
+
+AES-256-CBC
+PBKDF2-HMAC-SHA256
+100000 iterations
+OpenSSL salted format

@@ -1,0 +1,22 @@
+JANUS INITIALIZATION HANDSHAKE
+
+PROTOCOL:
+DH-217
+
+PUBLIC PARAMETERS:
+
+p = 467
+g = 2
+
+JANUS PUBLIC VALUE:
+A = 132
+
+SHAW TERMINAL PUBLIC VALUE:
+B = 363
+
+CAPTURE STATUS:
+INCOMPLETE
+
+The JANUS ephemeral exponent is not present in this archive.
+
+A recovery fragment may exist inside the Overseer's initialization logs.

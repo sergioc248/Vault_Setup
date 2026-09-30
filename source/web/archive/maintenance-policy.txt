@@ -1,0 +1,5 @@
+VAULT-TEC MAINTENANCE POLICY 217-A
+
+Remote work must be recorded in an authorized work order.
+Temporary accounts must be removed after terminal migration.
+Configuration backups must never be retained on public terminals.

@@ -1,0 +1,3 @@
+VAULT-TEC TERMINAL RETENTION STANDARD 4-C
+
+Routine diagnostic records must be retained for 90 days. Records designated OMEGA require Research Director approval before deletion.

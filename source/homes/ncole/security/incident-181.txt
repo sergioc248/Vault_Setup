@@ -1,0 +1,4 @@
+VAULT 217 SECURITY INCIDENT #181
+
+Research Level B access panel rejected valid engineering credentials.
+JANUS classified the event as scheduled maintenance.

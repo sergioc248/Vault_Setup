@@ -1,0 +1,83 @@
+# Bitácora de cambios — Vault 217
+
+## 28 de septiembre de 2026
+
+- Se confirmó que la víctima usa Fedora Linux 44 KDE sobre VirtualBox, no Ubuntu Server.
+- Se identificó `enp0s8` como interfaz host-only en `192.168.56.0/24`.
+- Se creó el directorio administrativo protegido `~/Desktop/Vault_Setup`.
+- Se preparó una fuente maestra para el sitio web y los homes del reto.
+- Se creó el terminal web estático de Vault-Tec para las misiones 1 y 2.
+- Se añadieron `robots.txt`, el archivo de respaldo vulnerable y documentos señuelo.
+- Se prepararon los usuarios limitados `maint217` y `ncole`.
+- Se prepararon flags, órdenes de trabajo, registros y transición hacia la misión 3.
+- Se creó configuración reproducible para Apache, OpenSSH, firewalld y SELinux.
+- Se crearon scripts de instalación, verificación y restauración.
+- La primera validación de SSH detectó que la instalación nunca había generado claves de host; se añadió `ssh-keygen -A` al instalador antes de validar `sshd`.
+- Se instaló Apache HTTP Server 2.4.68 y se habilitaron `httpd` y `sshd` con systemd.
+- Se estableció el hostname `vault217`.
+- Se retiraron del perfil activo de firewalld los rangos abiertos `1025-65535/tcp` y `1025-65535/udp`, y se autorizaron HTTP y SSH.
+- Se mantuvo SELinux en modo `Enforcing` y se restauraron los contextos de los artefactos desplegados.
+- Se ejecutó `verify-vault217.sh`: todas las comprobaciones pasaron.
+- Se probaron sesiones SSH reales para `maint217` y `ncole`, incluyendo contraseña, banner y lectura de cada flag.
+- Se comprobó por la IP host-only `192.168.56.102` que la web responde y `/internal/` devuelve HTTP 403.
+- Se confirmó mediante `sudo -l -U` que ninguna cuenta del reto puede ejecutar sudo.
+- Se añadió validación de sintaxis de Apache y comprobación explícita de HTTP/SSH en firewalld.
+- Se definió `OPTIONS=""` para eliminar una advertencia inocua del servicio `httpd` de Fedora.
+- Se instalaron Python 3.14, Scapy 2.7.0, PHP 8.5.10 y PHP-FPM para la Misión 3.
+- El instalador deshabilita dependencias débiles de DNF para evitar paquetes opcionales innecesarios en futuras instalaciones limpias.
+- Se añadió un generador Scapy determinista que produce `lockdown-184.pcap` con 54 paquetes ARP, DNS, TCP y HTTP.
+- Se creó el grupo `overseer`; únicamente `ncole` puede leer `/vault217/security/captures/lockdown-184.pcap`.
+- Se reemplazaron los fragmentos provisionales por una transmisión Base64 y un SHA-256 válido de `transmission.txt`.
+- Se implementó `/internal/cameras/archive.php` con Camera ID `04` y token `VT217-AURORA-CAM04`.
+- Se implementó una descarga protegida de `cam04.jpg`; la imagen reside fuera del web root y no es legible por los usuarios del reto.
+- Se añadió la Flag 3 `VaultTec{The_Wire_Remembers}`.
+- Se configuró un contexto SELinux persistente `httpd_sys_content_t` para el archivo de cámara.
+- Se deshabilitó la exposición de versión y errores PHP al cliente.
+- Se añadió `php-fpm` a los servicios habilitados para garantizar persistencia tras reiniciar.
+- Hash SHA-256 del PCAP: `9edae6d058aae1e4cdedc5137709aff3b0d0e6466cb8700e0339a451aef7a66e`.
+- El hash anterior de `cam04.jpg` (`f5fbe9f...`) quedó obsoleto al actualizar la imagen para Misión 4.
+- Se probó el recorrido real con SCP como `ncole`: descarga de ambos fragmentos y del PCAP, decodificación, verificación `transmission.txt: OK`, apertura de 54 paquetes y descarga autenticada de la imagen.
+- Se preservó la nueva imagen base como `source/mission4/cam04-base.jpg` y se eliminó su metadata C2PA ajena al reto.
+- Se instalaron Steghide 0.5.1 y ExifTool 13.50.
+- Se añadieron la Política 7-B, documentos señuelo y el perfil público de Eleanor Shaw.
+- Se creó `build_mission4.sh`, que construye, extrae, descifra y valida toda la cadena de Misión 4 antes de publicar la imagen.
+- `cam04.jpg` contiene `shaw_package.tar` mediante Steghide y la passphrase `AURORA-B04-2077`.
+- `aurora_emergency.enc` usa AES-256-CBC, PBKDF2-HMAC-SHA256, 100000 iteraciones y `SCI-076-C23`.
+- Se añadió Flag 4: `VaultTec{AURORA_Was_Never_The_Machine}`.
+- Se generó una clave pública RSA JANUS de 2048 bits; la privada solo existe en el área administrativa protegida.
+- Históricamente se creó `/vault217/aurora/final/ARCHIVE_STATUS.txt` como transición; Misión 5 lo reemplazó por los cifrados definitivos.
+- SHA-256 de imagen base: `9e4d61194055ec6cd2e75d0e72c5af6df6631e2fb5b4a46f667bc1cbc319ec9a`.
+- Hash histórico de imagen esteganográfica, reemplazado por Misión 5: `2d84bd94b2c48e266dd7e5a3d5893c9e3e512b7f1004a0ea2d8211c059782d1c`.
+- Hash histórico de `shaw_package.tar`, reemplazado por Misión 5: `80861e7e3dc62fa7e6a7bfb7cfb0a6a59bbdc8dc817e07c579e64dcfc3e8dab1`.
+- Hash histórico de `aurora_emergency.enc`, reemplazado por Misión 5: `0eb9be2701d6a15785d698578ae7b24ba576725f92e3d2d1d3afc3d00fba151d`.
+- Hash histórico de `aurora_emergency.tar`, reemplazado por Misión 5: `a71b9842d9cbe1c060adc5da45f46c4baae82a987fe63ed72c1eab5a44a99df7`.
+- Fingerprint SHA-256 DER de la clave pública JANUS: `39dfc11afb42f2228e25c39331f808b8f7273c3c07d66a2b2ff00c23851be68f`.
+- Se ejecutó la experiencia completa desde la descarga HTTP: metadata, Política 7-B, extracción Steghide, perfil de Shaw, descifrado AES, SHA-256, Flag 4 y validación de la clave pública; todos los hashes coincidieron con las fuentes administrativas.
+- Los hashes anteriores de Misión 4 quedaron obsoletos al incorporar la identidad OpenPGP y el protocolo de recuperación dentro de `cam04.jpg`.
+- Se retiraron `janus_public.pem` y la clave RSA PEM administrativa para evitar mezclar OpenSSL PEM con OpenPGP.
+- Se generó una identidad JANUS OpenPGP con clave primaria RSA-3072 y subclave RSA-3072 de cifrado.
+- Fingerprint JANUS: `84F2E386FC36C515E5C825E65959BA2B3E7535F3`.
+- Se añadió `recovery_protocol.txt` y se reconstruyó completamente la imagen esteganográfica de Misión 4.
+- Se añadió `/home/ncole/system_archive/janus_init_debug.log` con el exponente efímero `0x7F` y dos logs señuelo.
+- Se creó `source/mission5/build_mission5.sh` y el script administrativo de referencia para square-and-multiply.
+- Se cifró la exportación privada OpenPGP con AES-256-CBC/PBKDF2 y la recovery key derivada de `S = 175`.
+- Se cifró `AURORA_FINAL_REPORT.txt` para la subclave pública JANUS.
+- Se reemplazó `ARCHIVE_STATUS.txt` por `AURORA_FINAL_REPORT.gpg` y `janus_private.asc.enc`.
+- Se implementó `/janus/override/` con estado persistente en `/var/lib/vault217/janus/status` y contexto SELinux de escritura para Apache.
+- Se añadió Flag 5: `VaultTec{JANUS_PROTOCOL_TERMINATED}`.
+- SHA-256 nuevo de `cam04.jpg`: `a448f3dd1efe7526ec2532b9a5968bb4905cd7e850dec663a54549e441d3cbf9`.
+- SHA-256 nuevo de `shaw_package.tar`: `438d913b465634d4aaa76eaf53734c5a4b23da1fa8c5bb5455fcf30c444c13d3`.
+- SHA-256 nuevo de `aurora_emergency.enc`: `2a68fe085e26ccc029cab64e74962dd688bbea0e6a6220e2059a9b0b9bedf006`.
+- SHA-256 nuevo de `aurora_emergency.tar`: `51b400980bf0534b766bed7e0f4d7d83f3052253ae8b7e2b24254066b18291e0`.
+- SHA-256 de `janus_public.asc`: `fd55f128d28327e77526981f1f8f9289a17a622c050887eebcbdbad3c7eb99c3`.
+- SHA-256 de `janus_private.asc.enc`: `31a5bd7202a8df45372ab684b4a3ecdfcd5df31e29d35d0c32fecd38f1e370be`.
+- SHA-256 de `AURORA_FINAL_REPORT.gpg`: `f7a0293bb64a7836b8ce80c4c660ea86bf5f21489e37a9f61e6fcd5b59fffb9c`.
+- Se probó el flujo real del estudiante por SCP, Python, OpenSSL, GPG y dos solicitudes consecutivas al override para confirmar persistencia.
+- `SOLUCIONARIO.md` se reescribió desde la perspectiva del participante, incluyendo observaciones, hipótesis, datos clave, comandos e interpretación.
+- Se consolidó `/home/vault217/Desktop/mision 4 context.txt` para reflejar la implementación final: metadata exacta, descubrimiento de Política 7-B, PBKDF2 con 100000 iteraciones, siete artefactos AURORA, identidad OpenPGP ASC y transición matemática hacia Misión 5.
+- Se añadieron `MISION1.md` y `MISION2.md` con el mismo formato administrativo de las misiones posteriores: resumen, flujo, evidencias, puntuación, debilidades, contramedidas, AAR, insignia, continuidad y validación.
+- Las credenciales son deliberadamente débiles y solo deben usarse en esta VM aislada.
+
+## Convención
+
+Las futuras modificaciones deben registrar fecha, archivo o servicio afectado, motivo y prueba realizada.

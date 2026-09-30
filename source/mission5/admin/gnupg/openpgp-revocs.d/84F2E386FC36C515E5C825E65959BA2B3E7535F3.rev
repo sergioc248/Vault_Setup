@@ -1,0 +1,35 @@
+This is a revocation certificate for the OpenPGP key:
+
+pub   rsa3072 2026-09-28 [S]
+      84F2E386FC36C515E5C825E65959BA2B3E7535F3
+uid          JANUS Core System <janus@vault217.local>
+
+A revocation certificate is a kind of "kill switch" to publicly
+declare that a key shall not anymore be used.  It is not possible
+to retract such a revocation certificate once it has been published.
+
+Use it to revoke this key in case of a compromise or loss of
+the secret key.  However, if the secret key is still accessible,
+it is better to generate a new revocation certificate and give
+a reason for the revocation.  For details see the description of
+of the gpg command "--generate-revocation" in the GnuPG manual.
+
+To avoid an accidental use of this file, a colon has been inserted
+before the 5 dashes below.  Remove this colon with a text editor
+before importing and publishing this revocation certificate.
+
+:-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: This is a revocation certificate
+
+iQG2BCABCgAgFiEEhPLjhvw2xRXlyCXmWVm6Kz51NfMFAmq6IqICHQAACgkQWVm6
+Kz51NfNRWQwA2X1xNhxHHc0U2Dk9EadWy7MLI1ZwsKJ0tL9C7ccl741Ayq186G6G
+kXOT7iaPWZhcpPIMnUs5YfORi1ezoYNZ7SMlrAMPBcQEDVJ42cNej0FMT8yHOOmb
+Tfn9IShPM79+G7KpXtDepaYYRfnJ007g/6djPf8I5FgGoCGQC/pJDbCFHG747uVa
+3X31vSEPAIAVDNS/zOQhqVfuebn4KXKHFDUIbbgVWPHwiAAVx1/pS4tFgbbCMqXK
+wXX275Slk1jkzTe6I+Srbr7Eu1iFB6SR2K6H0JxwBdQSZEgS0Coy6fyEa8HKAdzR
+OolU91A4SRmqXtl/zv0QE4pEqSXw3IWpKll27PRA/a18orBexwY0AX6kLYOWS4kY
+OofelSJYumZDsZ4t6Ag2Dza4SeNOmTEWwhiWxvBq6UYZlRY1nbIbjKGUk63liQCg
+YTS4bsxTCqZMro7nW5Ang5Ne4or3tQsTTb5NN01YZWAxgHyTi1oxPjo8M5NcFtBq
+qWMTytb5xSB0
+=HOyV
+-----END PGP PUBLIC KEY BLOCK-----
